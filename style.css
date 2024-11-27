@@ -213,7 +213,7 @@ img {
       rgba(0, 255, 255, 0.35)
     ),
     url('img/hero.jpg');
-  background-position: center;
+  background-position: 0 100%;
 }
 
 h1 {
