@@ -13,8 +13,6 @@ body {
   background: var(--background-color);
   font-family: var(--font);
   justify-content: center;
-  overflow-x: hidden;
-  min-width: 400px;
   width: 100vw;
 }
 
@@ -28,9 +26,6 @@ nav {
   justify-content: center;
   padding: 10px 0;
   width: 100vw;
-  font-size: 22px;
-  font-family: 'Charmonman', cursive;
-  font-weight: 700;
   border-bottom: 2px solid #748e63;
   background-color: #faf8ed;
   z-index: 1;
@@ -39,15 +34,42 @@ nav {
 
 .navContainer {
   display: flex;
-  justify-content: space-between;
-  width: 80%;
-  max-width: 400px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 400px;
 }
 
 .navItem {
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  color: #748e63;
+  margin-right: 10px;
+  letter-spacing: -0.5px;
+}
+
+.navItem:hover {
+  opacity: 0.8;
+}
+
+.navLogo {
+  font-size: 24px;
   text-decoration: none;
   font-weight: bold;
   color: #748e63;
+  font-family: 'Charmonman', cursive;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  text-wrap: nowrap;
+  margin-left: 10px;
+  letter-spacing: -2px;
+}
+
+.navLogo:hover {
+  opacity: 0.8;
 }
 
 img {
@@ -175,4 +197,43 @@ img {
 /* setting dot to the right if the card is odd */
 .card:nth-child(even) > .info > .title::before {
   right: -45px;
+}
+
+/* home header */
+
+.jumbotron {
+  background-size: cover;
+  height: 600px;
+  overflow-x: hidden;
+}
+
+#header-home {
+  background-image: radial-gradient(
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 255, 255, 0.35)
+    ),
+    url('img/hero.jpg');
+  background-position: center;
+}
+
+h1 {
+  font-size: 60px;
+  color: gray;
+  font-family: 'Charmonman', cursive;
+  font-weight: 700;
+  text-align: center;
+}
+
+#homepageContent {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
 }
