@@ -48,6 +48,7 @@ nav {
   color: #748e63;
   margin-right: 10px;
   letter-spacing: -0.5px;
+  transition: 0.2s;
 }
 
 .navItem:hover {
@@ -66,6 +67,7 @@ nav {
   text-wrap: nowrap;
   margin-left: 10px;
   letter-spacing: -2px;
+  transition: 0.2s;
 }
 
 .navLogo:hover {
@@ -117,14 +119,6 @@ img {
   bottom: -4.5px;
   border-width: 5px 0 5px 5px;
   border-radius: 50px 0 0 50px;
-}
-
-/* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
-@media only screen and (max-width: 400px) {
-  .card:nth-child(odd)::before {
-    top: -5px;
-    bottom: -5px;
-  }
 }
 
 /* Setting the border of top, bottom, right */
@@ -235,5 +229,13 @@ h1 {
 @media only screen and (max-width: 600px) {
   h1 {
     font-size: 32px;
+  }
+}
+
+/* Setting the top and bottom to "-5px" because earlier it was out of a pixel in mobile devices */
+@media only screen and (max-width: 400px) {
+  .card:nth-child(odd)::before {
+    top: -5px;
+    bottom: -5px;
   }
 }
